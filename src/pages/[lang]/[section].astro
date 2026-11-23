@@ -1,0 +1,22 @@
+---
+import Base from '../../layouts/Base.astro';
+import PostCards from '../../components/PostCards.astro';
+import { getPosts } from '../../lib/posts';
+import { languages, words, type Lang } from '../../lib/i18n';
+export function getStaticPaths() { return languages.flatMap(lang => ['about','writing','experience','projects','contact'].map(section => ({params:{lang,section}}))); }
+const lang = Astro.params.lang as Lang;
+const section = Astro.params.section as 'about'|'writing'|'experience'|'projects'|'contact';
+const t = words[lang];
+const titles = {about:t.about, writing:t.writing, experience:t.experience, projects:t.projectsTitle, contact:t.contact};
+const intros = {about:t.aboutText,writing:t.writingIntro,experience:t.experienceIntro,projects:t.projectIntro,contact:t.contactText};
+const posts = await getPosts(lang);
+const projectNames = lang === 'en' ? ['AI Agents Lab','Report Assistant','Personal Knowledge Base'] : ['Laborator de agenți AI','Asistent pentru rapoarte','Bază personală de cunoștințe'];
+---
+<Base lang={lang} title={titles[section]}>
+<div class="page-head"><div class="eyebrow">OM. / {titles[section]}</div><h1>{section==='about'?t.aboutTitle:titles[section]}</h1><p>{intros[section]}</p></div>
+{section === 'writing' && <section class="section">{posts.length ? <PostCards posts={posts} lang={lang}/> : <p>{t.noPost}</p>}</section>}
+{section === 'about' && <div class="prose"><p class="about-fullname">Ovidiu Mihail Mihăilă</p><p>{t.aboutText}</p><p><em>{t.draftNotice}</em></p></div>}
+{section === 'experience' && <div class="timeline"><div class="timeline-item"><div class="eyebrow">CAREER STORIES · SAMPLE</div><h2>Teletrans</h2><p>{t.journeyDesc}</p><span class="chip">{t.soon}</span></div><div class="timeline-item"><h3>{lang==='en'?'More roles will be added after CV review':'Alte roluri vor fi adăugate după verificarea CV-ului'}</h3><p>{t.draftNotice}</p></div></div>}
+{section === 'projects' && <div class="cards">{projectNames.map((name,i) => <div class="card project-card"><div class="project-icon">{['◇','▤','◈'][i]}</div><h3>{name}</h3><p>{t.labDesc}</p><span class="chip">{t.demo}</span></div>)}</div>}
+{section === 'contact' && <div class="prose"><p>{t.email}</p><p>{lang === 'en'?'Social links will be added after confirmation.':'Linkurile sociale vor fi adăugate după confirmare.'}</p></div>}
+</Base>

@@ -1,0 +1,18 @@
+---
+import Base from '../../../layouts/Base.astro';
+import { render } from 'astro:content';
+import { getPosts, getTranslation } from '../../../lib/posts';
+import { words, localPath, type Lang } from '../../../lib/i18n';
+export async function getStaticPaths() {
+ const posts = await getPosts();
+ return Promise.all(posts.map(async post => ({ params: { lang: post.lang, slug: post.slug }, props: { post, translation: await getTranslation(post) ?? null } })));
+}
+const { post, translation } = Astro.props;
+const lang = Astro.params.lang as Lang; const t = words[lang];
+const { Content } = await render(post);
+const altHref = translation ? localPath(translation.lang, `writing/${translation.slug}`) : undefined;
+---
+<Base lang={lang} title={post.data.title} description={post.data.description} altHref={altHref} altFallback="writing">
+<div class="page-head"><a href={localPath(lang,'writing')} class="eyebrow">← {t.back}</a><h1>{post.data.title}</h1><p>{post.data.description}</p><span class="meta">{post.data.category} · {post.minutes} min</span></div>
+<article class="prose"><Content /></article>
+</Base>

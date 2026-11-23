@@ -1,0 +1,12 @@
+---
+import type { Post } from '../lib/posts';
+import { localPath } from '../lib/i18n';
+interface Props { posts: Post[]; lang: 'en'|'ro'; }
+const { posts, lang } = Astro.props;
+---
+<div class="cards">
+{posts.map((post,i) => <a class="card" href={localPath(lang, `writing/${post.slug}`)}>
+ <div class:list={['card-image', ['abstract','process','mountain'][i%3]]}></div>
+ <div class="card-body"><div class="category">{post.data.category}</div><h3>{post.data.title}</h3><p>{post.data.description}</p><span class="meta">{post.data.date.toLocaleDateString(lang === 'ro'?'ro-RO':'en-US',{year:'numeric',month:'short',day:'numeric'})} · {post.minutes} min</span></div>
+</a>)}
+</div>

@@ -1,0 +1,52 @@
+---
+import '../styles/global.css';
+import type { Lang } from '../lib/i18n';
+import { words, navSlugs, localPath } from '../lib/i18n';
+interface Props { lang: Lang; title?: string; description?: string; altHref?: string; altFallback?: string; }
+const { lang, title, description, altHref, altFallback } = Astro.props;
+const t = words[lang];
+const currentSegment = Astro.url.pathname.replace(/^\/(en|ro)\/?/, '');
+const opposite: Lang = lang === 'en' ? 'ro' : 'en';
+// Pe articole: link către traducere dacă există, altfel către lista de articole din cealaltă limbă.
+const languagePath = altHref ?? (altFallback ? `/${opposite}/${altFallback}/` : `/${opposite}/${currentSegment}`);
+const pageTitle = title ? `${title} | O/M/M` : 'O/M/M — Technology, people & processes';
+---
+<!doctype html>
+<html lang={lang} data-theme="light">
+<head>
+ <meta charset="utf-8" />
+ <meta name="viewport" content="width=device-width, initial-scale=1" />
+ <meta name="description" content={description ?? t.intro} />
+ <title>{pageTitle}</title>
+ <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+ <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />
+ {(!altFallback || altHref) && <link rel="alternate" hreflang={lang} href={new URL(Astro.url.pathname, Astro.site)} />}
+ {(!altFallback || altHref) && <link rel="alternate" hreflang={opposite} href={new URL(languagePath, Astro.site)} />}
+ <link rel="alternate" type="application/rss+xml" title="O/M/M" href={`/${lang}/rss.xml`} />
+ <meta property="og:title" content={pageTitle} />
+ <meta property="og:description" content={description ?? t.intro} />
+ <meta property="og:type" content={altFallback ? 'article' : 'website'} />
+ <meta property="og:locale" content={lang === 'ro' ? 'ro_RO' : 'en_US'} />
+ <script is:inline>try { document.documentElement.dataset.theme = localStorage.getItem('om-theme') || 'light'; } catch {}</script>
+</head>
+<body>
+ <div class="site-wrap">
+  <header class="site-header">
+   <a class="brand" href={localPath(lang)} aria-label="O/M/M home"><span class="brand-char">O</span><span class="brand-slash">/</span><span class="brand-char">M</span><span class="brand-slash">/</span><span class="brand-char">M</span></a>
+   <nav class="main-nav" aria-label="Main navigation">
+    {navSlugs.map((slug, i) => <a class:list={['nav-link', { active: currentSegment.replace(/\/$/,'') === slug }]} href={localPath(lang,slug)}>{t.nav[i]}</a>)}
+   </nav>
+   <div class="header-tools"><a class="lang-toggle" href={languagePath} aria-label={lang === 'en' ? 'Switch to Romanian' : 'Switch to English'}>{lang.toUpperCase()} <span class="arrow">⇄</span> {opposite.toUpperCase()}</a><button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Dark mode">◐</button></div>
+  </header>
+  <main><slot /></main>
+  <footer class="footer"><div class="footer-signature"><div class="footer-name">OVIDIU MIHAIL MIHĂILĂ</div><div class="footer-tagline">technology · management · ai</div></div><span class="footer-copyright">© {new Date().getFullYear()}</span></footer>
+ </div>
+ <script is:inline>
+  document.querySelector('#theme-toggle')?.addEventListener('click', () => {
+   const next = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+   document.documentElement.dataset.theme = next;
+   try { localStorage.setItem('om-theme', next); } catch {}
+  });
+ </script>
+</body>
+</html>
