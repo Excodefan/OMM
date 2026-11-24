@@ -61,21 +61,23 @@ items:
     story: electrica
   - role: "Manager de proiect"
     organization: "Expert Computers"
-    period: "2018 – 2019"
-    location: "Canada"
+    period: "Iulie 2018 – iulie 2019"
+    location: "London, Ontario, Canada"
     text: |-
-      Am lucrat ca Manager de proiect la Expert Computers, coordonând proiecte de adopție și migrare în cloud.
+      Am gestionat proiecte IT de adoptare a soluțiilor cloud și modernizare a infrastructurii informatice, inclusiv migrarea utilizatorilor de la Microsoft Exchange 2016 la Office 365 și inițiative de implementare a soluțiilor Microsoft Azure.
 
-      Un proiect important a fost migrarea de la Exchange 2016 la Office 365, incluzând planificarea tranziției utilizatorilor, a activităților și a etapelor de implementare.
+      Responsabilitățile mele au inclus planificarea proiectelor, coordonarea echipelor tehnice, colaborarea cu beneficiarii și specialiștii în soluții, precum și urmărirea termenelor, riscurilor și etapelor de implementare.
 
-      Am coordonat, de asemenea, inițiative de adoptare Azure și de migrare a infrastructurii, de la sisteme locale către cloud.
+      Am contribuit, de asemenea, la pregătirea propunerilor de proiect și a documentelor de definire a serviciilor, urmărind corelarea cerințelor tehnice cu așteptările clienților și planurile de livrare.
 
-      În activitatea zilnică am colaborat cu clienți, echipe tehnice și furnizori pentru a menține proiectele aliniate și a gestiona riscurile până la livrare.
+      Această experiență mi-a consolidat practica managementului de proiect, prin îmbinarea planificării structurate cu managementul relațiilor cu părțile implicate și coordonarea implementărilor tehnice.
     areas:
       - "Managementul proiectelor"
-      - "Migrare în cloud"
+      - "Migrare cloud"
       - "Microsoft 365"
       - "Azure"
+      - "Relația cu beneficiarii"
+      - "Livrarea proiectelor"
     story: expert
   - role: "Director general / Manager de proiect"
     organization: "Arhivio Data"

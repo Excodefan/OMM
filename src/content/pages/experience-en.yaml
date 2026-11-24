@@ -61,21 +61,23 @@ items:
     story: electrica
   - role: "Project Manager"
     organization: "Expert Computers"
-    period: "2018 – 2019"
-    location: "Canada"
+    period: "July 2018 – July 2019"
+    location: "London, Ontario, Canada"
     text: |-
-      I worked as a Project Manager at Expert Computers, delivering cloud adoption and migration projects.
+      I managed IT projects focused on cloud adoption and infrastructure modernization, including user migration from Microsoft Exchange 2016 to Office 365 and initiatives involving Microsoft Azure.
 
-      A key project was the migration from Exchange 2016 to Office 365, including planning user transition, activities and deployment milestones.
+      My responsibilities covered project planning, coordination of technical teams, collaboration with clients and solution specialists, and monitoring delivery schedules, risks and project milestones.
 
-      I also coordinated Azure adoption and infrastructure migration initiatives, supporting the move from on-premises systems to the cloud.
+      I also contributed to project proposals and statements of work, ensuring that technical requirements, client expectations and delivery plans were aligned.
 
-      Day to day, I worked with clients, technical teams and suppliers to keep projects aligned and manage risks through to delivery.
+      This role strengthened my hands-on project management experience, combining structured planning, stakeholder communication and the coordination of technical implementations.
     areas:
       - "Project Management"
       - "Cloud Migration"
       - "Microsoft 365"
       - "Azure"
+      - "Stakeholder Management"
+      - "Project Delivery"
     story: expert
   - role: "Managing Director / Project Manager"
     organization: "Arhivio Data"
