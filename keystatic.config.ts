@@ -23,6 +23,30 @@ const pageFields = (l: { title: string; intro: string; body: string }) => ({
 });
 const en = { title: 'Page title', intro: 'Intro (short text under the title)', body: 'Body' };
 const ro = { title: 'Titlul paginii', intro: 'Introducere (text scurt sub titlu)', body: 'Conținut' };
+const experienceSchema = (l: { title: string; intro: string }) => ({
+  title: fields.text({ label: l.title }),
+  intro: fields.text({ label: l.intro, multiline: true }),
+  items: fields.array(
+    fields.object({
+      role: fields.text({ label: 'Role / Rol' }),
+      organization: fields.text({ label: 'Organization / Organizație' }),
+      period: fields.text({ label: 'Period / Perioadă' }),
+      location: fields.text({ label: 'Location / Locație' }),
+      text: fields.text({ label: 'Description (separate paragraphs with an empty line)', multiline: true }),
+      areas: fields.array(fields.text({ label: 'Area' }), { label: 'Key areas', itemLabel: (p) => p.value || 'Area' }),
+      story: fields.select({
+        label: 'Career Story animation',
+        options: [
+          { label: 'None', value: 'none' },
+          { label: 'Teletrans (2011-2016)', value: 'teletrans' },
+          { label: 'IT Expert / MIPE (2024-present)', value: 'mipe' },
+        ],
+        defaultValue: 'none',
+      }),
+    }),
+    { label: 'Roles (newest first)', itemLabel: (p) => p.fields.role.value || 'Role' },
+  ),
+});
 const projectsSchema = (intro: string, itemLabel: string, name: string, desc: string, status: string) => ({
   intro: fields.text({ label: intro, multiline: true }),
   items: fields.array(
@@ -48,8 +72,8 @@ export default config({
     aboutRo: singleton({ label: 'Despre (Română)', path: 'src/content/pages/about-ro', format: { contentField: 'content' }, schema: pageFields(ro) }),
     contactEn: singleton({ label: 'Contact (English)', path: 'src/content/pages/contact-en', format: { contentField: 'content' }, schema: { ...pageFields(en), email: fields.text({ label: 'Email' }) } }),
     contactRo: singleton({ label: 'Contact (Română)', path: 'src/content/pages/contact-ro', format: { contentField: 'content' }, schema: { ...pageFields(ro), email: fields.text({ label: 'Email' }) } }),
-    experienceEn: singleton({ label: 'Experience (English)', path: 'src/content/pages/experience-en', format: { contentField: 'content' }, schema: pageFields(en) }),
-    experienceRo: singleton({ label: 'Experiență (Română)', path: 'src/content/pages/experience-ro', format: { contentField: 'content' }, schema: pageFields(ro) }),
+    experienceEn: singleton({ label: 'Experience (English)', path: 'src/content/pages/experience-en', schema: experienceSchema({ title: 'Page title', intro: 'Intro (short text under the title)' }) }),
+    experienceRo: singleton({ label: 'Experiență (Română)', path: 'src/content/pages/experience-ro', schema: experienceSchema({ title: 'Titlul paginii', intro: 'Introducere (text scurt sub titlu)' }) }),
     projectsEn: singleton({ label: 'Projects (English)', path: 'src/content/pages/projects-en', schema: projectsSchema('Intro', 'Projects', 'Name', 'Description', 'Status (e.g. Concept, Live)') }),
     projectsRo: singleton({ label: 'Proiecte (Română)', path: 'src/content/pages/projects-ro', schema: projectsSchema('Introducere', 'Proiecte', 'Nume', 'Descriere', 'Stare (ex. Concept, Activ)') }),
   },

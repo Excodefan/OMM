@@ -1,0 +1,19 @@
+---
+import StoryPlayer from './StoryPlayer.astro';
+interface Props { role: { role: string; organization: string; period: string; location: string; text: string; areas: string[]; story: string }; lang: 'en' | 'ro'; }
+const { role, lang } = Astro.props;
+const paragraphs = role.text.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
+const story = role.story === 'teletrans' || role.story === 'mipe' ? role.story : null;
+---
+<article class="role">
+  <header class="role-head">
+    <div class="eyebrow">{role.period}{role.location && ` · ${role.location}`}</div>
+    <h2>{role.role}</h2>
+    <div class="role-org">{role.organization}</div>
+  </header>
+  <div class="role-text">
+    {paragraphs.map((p, i) => <p class={i === 0 ? 'lead' : undefined}>{p}</p>)}
+    {role.areas.length > 0 && <ul class="role-areas">{role.areas.map(a => <li class="chip">{a}</li>)}</ul>}
+  </div>
+  {story && <div class="role-story"><StoryPlayer story={story} lang={lang} /></div>}
+</article>

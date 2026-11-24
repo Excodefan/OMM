@@ -1,0 +1,43 @@
+title: "Experience"
+intro: "A readable professional timeline, complemented by short animated Career Stories."
+items:
+  - role: "IT Expert"
+    organization: "Ministry of Investments and European Projects"
+    period: "September 2024 – Present"
+    location: "Bucharest, Romania"
+    text: |-
+      My work focuses on the technical assessment and monitoring of EU-funded projects, with particular attention to software development, system integration and IT implementation activities.
+
+      I review technical documentation, progress reports and project deliverables to assess the consistency of reported activities and their supporting information from an IT perspective.
+
+      The role combines technical analysis with an understanding of European funding procedures and reporting systems, including MySMIS and the PNRR platform.
+
+      Alongside these responsibilities, I develop Python and JavaScript tools to streamline data processing, reporting and repetitive workflows. I also explore practical applications of cloud-based and local AI tools for document analysis and information processing, with attention to confidentiality and data protection.
+    areas:
+      - "Technical Assessment"
+      - "EU-Funded Projects"
+      - "Software & Systems Integration"
+      - "Process Automation"
+      - "Applied AI"
+    story: mipe
+  - role: "Managing Director / Director"
+    organization: "Teletrans SA"
+    period: "May 2011 – July 2016"
+    location: "Bucharest, Romania"
+    text: |-
+      Teletrans, a subsidiary of Romania's national electricity transmission operator, provided telecommunications, IT and process control solutions for the energy sector.
+
+      My responsibilities included executive management of the company and, subsequently, the coordination of strategy, programmes, communications and international relations.
+
+      The role involved overseeing IT and telecommunications investments, coordinating project portfolios and aligning technological initiatives with organizational priorities.
+
+      Representative initiatives included SAP HCM and CRM implementations, SCADA modernization, fibre-optic infrastructure, data centre development and disaster recovery solutions.
+
+      I was also involved in exploring European funding opportunities for technology and infrastructure projects, within the regulatory and organizational constraints applicable at the time.
+    areas:
+      - "Executive Leadership"
+      - "IT Strategy"
+      - "Project Governance"
+      - "Telecommunications"
+      - "Energy Sector"
+    story: teletrans

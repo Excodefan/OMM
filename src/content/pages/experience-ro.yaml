@@ -1,0 +1,43 @@
+title: "Experiență"
+intro: "Un parcurs profesional ușor de urmărit, completat de scurte animații Career Stories."
+items:
+  - role: "Expert IT"
+    organization: "Ministerul Investițiilor și Proiectelor Europene"
+    period: "Septembrie 2024 – prezent"
+    location: "București"
+    text: |-
+      Activitatea mea se concentrează pe evaluarea tehnică și monitorizarea proiectelor finanțate din fonduri europene, cu accent pe dezvoltarea software, integrarea sistemelor informatice și implementarea componentelor IT.
+
+      Analizez documentația tehnică, rapoartele de progres și livrabilele proiectelor, urmărind coerența activităților raportate și a informațiilor justificative din perspectivă IT.
+
+      Această activitate îmbină analiza tehnică și cunoașterea procedurilor și sistemelor de raportare specifice finanțărilor europene, inclusiv MySMIS și platforma PNRR.
+
+      În paralel, dezvolt instrumente Python și JavaScript pentru eficientizarea prelucrării datelor, raportării și activităților repetitive. Explorez și utilizarea practică a instrumentelor AI cloud și locale pentru analiza documentelor și procesarea informațiilor, acordând atenție confidențialității și protecției datelor.
+    areas:
+      - "Evaluare tehnică IT"
+      - "Proiecte cu finanțare europeană"
+      - "Software și integrarea sistemelor"
+      - "Automatizarea proceselor"
+      - "AI aplicat"
+    story: mipe
+  - role: "Director general / Director"
+    organization: "Teletrans SA"
+    period: "Mai 2011 – iulie 2016"
+    location: "București"
+    text: |-
+      Teletrans, filială a CNTEE Transelectrica, furniza soluții și servicii de telecomunicații, tehnologia informației și informatică de proces pentru sectorul energetic.
+
+      Responsabilitățile mele au inclus conducerea executivă a societății și, ulterior, coordonarea activităților de strategie, programe, comunicare și relații internaționale.
+
+      Activitatea a presupus coordonarea investițiilor IT și de telecomunicații, gestionarea portofoliului de proiecte și corelarea inițiativelor tehnologice cu prioritățile organizației.
+
+      Printre proiectele reprezentative s-au numărat implementări SAP HCM și CRM, modernizarea sistemelor SCADA, infrastructura de fibră optică, dezvoltarea centrelor de date și soluțiile de recuperare în caz de dezastru.
+
+      Am fost implicat, de asemenea, în explorarea oportunităților de accesare a fondurilor europene pentru proiecte tehnologice și de infrastructură, în contextul constrângerilor de reglementare și organizatorice existente la acea vreme.
+    areas:
+      - "Management executiv"
+      - "Strategie IT"
+      - "Guvernanța proiectelor"
+      - "Telecomunicații"
+      - "Sector energetic"
+    story: teletrans
