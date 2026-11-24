@@ -1,0 +1,41 @@
+---
+// Animație Career Story: nu pornește singură. Un click încarcă pagina din /stories/ într-un iframe.
+interface Props { story: 'teletrans' | 'mipe'; lang: 'en' | 'ro'; }
+const { story, lang } = Astro.props;
+const meta = {
+  teletrans: { en: 'Teletrans · 2011—2016', ro: 'Teletrans · 2011—2016', bg: '#f5efe5', ink: '#272b2b', accent: '#bc6e4d' },
+  mipe: { en: 'IT Expert · 2024—present', ro: 'Expert IT · 2024—prezent', bg: '#edf3f2', ink: '#193139', accent: '#237e83' },
+}[story];
+const t = lang === 'ro'
+  ? { tag: 'CAREER STORY · 20 SEC', play: 'Redă animația', replay: '↻ Din nou', label: 'Animație Career Story' }
+  : { tag: 'CAREER STORY · 20 SEC', play: 'Play the story', replay: '↻ Replay', label: 'Career Story animation' };
+---
+<div class="story" data-story={story} data-lang={lang} data-title={`${t.label}: ${meta[lang]}`}
+  style={`--s-bg:${meta.bg};--s-ink:${meta.ink};--s-accent:${meta.accent}`}>
+  <div class="story-frame">
+    <button type="button" class="story-poster" aria-label={`${t.play} — ${meta[lang]}`}>
+      <span class="story-tag">{t.tag}</span>
+      <span class="story-name">{meta[lang]}</span>
+      <span class="story-play" aria-hidden="true"><svg viewBox="0 0 24 24" width="22" height="22"><path d="M8 5v14l11-7z" fill="currentColor"/></svg><span>{t.play}</span></span>
+    </button>
+  </div>
+  <button type="button" class="story-replay" hidden>{t.replay}</button>
+</div>
+<script>
+  function mount(root: HTMLElement) {
+    const frame = root.querySelector('.story-frame') as HTMLElement;
+    const poster = root.querySelector('.story-poster') as HTMLElement;
+    const replay = root.querySelector('.story-replay') as HTMLElement;
+    const src = `/stories/${root.dataset.story}.html?embed=1&lang=${root.dataset.lang}`;
+    const start = () => {
+      frame.querySelector('iframe')?.remove();
+      const f = document.createElement('iframe');
+      f.src = src; f.title = root.dataset.title || ''; f.loading = 'lazy';
+      f.setAttribute('sandbox', 'allow-scripts allow-same-origin');
+      frame.appendChild(f); poster.hidden = true; replay.hidden = false;
+    };
+    poster.addEventListener('click', start);
+    replay.addEventListener('click', start);
+  }
+  document.querySelectorAll<HTMLElement>('.story').forEach(mount);
+</script>

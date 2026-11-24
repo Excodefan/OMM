@@ -1,6 +1,7 @@
 ---
 import Base from '../../layouts/Base.astro';
 import PostCards from '../../components/PostCards.astro';
+import RoleCard from '../../components/RoleCard.astro';
 import { getEntry, render } from 'astro:content';
 import { getPosts } from '../../lib/posts';
 import { getProjects } from '../../lib/pages';
@@ -14,16 +15,18 @@ const defaultIntros = {about:t.aboutText, writing:t.writingIntro, experience:t.e
 const navTitles = {about:t.about, writing:t.writing, experience:t.experience, projects:t.projectsTitle, contact:t.contact};
 
 // Textele paginilor se editează în Keystatic → Pages.
-const page = ['about','experience','contact'].includes(section) ? await getEntry('pages', `${section}-${lang}`) : undefined;
+const page = ['about','contact'].includes(section) ? await getEntry('pages', `${section}-${lang}`) : undefined;
 const Body = page ? (await render(page)).Content : null;
+const experience = section === 'experience' ? await getEntry('experience', `experience-${lang}`) : undefined;
 const projects = section === 'projects' ? await getProjects(lang) : null;
 const posts = section === 'writing' ? await getPosts(lang) : [];
-const heading = page?.data.title || defaultTitles[section];
-const intro = projects?.intro || page?.data.intro || defaultIntros[section];
+const heading = experience?.data.title || page?.data.title || defaultTitles[section];
+const intro = projects?.intro || experience?.data.intro || page?.data.intro || defaultIntros[section];
 ---
 <Base lang={lang} title={navTitles[section]}>
 <div class="page-head"><div class="eyebrow">OM. / {navTitles[section]}</div><h1>{heading}</h1><p>{intro}</p></div>
 {section === 'writing' && <section class="section">{posts.length ? <PostCards posts={posts} lang={lang}/> : <p>{t.noPost}</p>}</section>}
 {Body && <div class="prose"><Body />{section === 'contact' && page?.data.email && <p><a href={`mailto:${page.data.email}`}>{page.data.email}</a></p>}</div>}
+{experience && <div class="roles">{experience.data.items.map(r => <RoleCard role={r} lang={lang} />)}</div>}
 {projects && <div class="cards">{projects.items.map((p,i) => <div class="card project-card"><div class="project-icon">{['◇','▤','◈'][i%3]}</div><h3>{p.name}</h3><p>{p.description}</p>{p.status && <span class="chip">{p.status}</span>}</div>)}</div>}
 </Base>
