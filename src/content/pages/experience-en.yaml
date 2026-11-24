@@ -120,3 +120,105 @@ items:
       - "Telecommunications"
       - "Energy Sector"
     story: teletrans
+  - role: "Managing Director"
+    organization: "Romanian Centre for Trade and Foreign Investment Promotion (CRPCIS) — Ministry of Economy"
+    period: "September 2009 – May 2011"
+    location: "Bucharest, Romania"
+    text: |-
+      I was appointed to lead this public institution in recognition of my international experience in information technology, with a particular focus on promoting Romania's IT expertise abroad and attracting foreign investment in the technology sector.
+
+      My role combined executive leadership with international business development, institutional representation and the promotion of Romanian capabilities in global markets.
+
+      Alongside the institution's broader mandate of supporting exports and foreign investment, I worked to position Romania's technology sector as an attractive destination for international partnerships and investment.
+
+      The experience broadened my perspective on the relationship between technology, economic development, international business and public policy.
+    areas:
+      - "Executive Leadership"
+      - "International Business Development"
+      - "IT Sector Promotion"
+      - "Foreign Investment"
+      - "Institutional Management"
+    story: crpcis
+  - role: "IT&C Adviser / Project Manager"
+    organization: "City of Piatra Neamț"
+    period: "October 2005 – September 2009"
+    location: "Piatra Neamț, Romania"
+    text: |-
+      I coordinated the municipality's IT department, reporting directly to the Mayor, and played a significant role in the modernization and digitalization of local public administration.
+
+      My responsibilities included developing IT strategies, defining technology priorities, coordinating technical teams and external providers, and supporting the integration of information systems into administrative processes.
+
+      I led and contributed to initiatives involving IT infrastructure assessment, the preparation of an enterprise resource planning (ERP) implementation, and the implementation of an electronic access control system for stadium facilities.
+
+      This experience represented an important transition in my career, combining my technical background with organizational leadership, public sector management and digital transformation.
+    areas:
+      - "IT Leadership"
+      - "Public Sector Digitalization"
+      - "IT Strategy"
+      - "Project Management"
+      - "Organizational Transformation"
+    story: piatra
+  - role: "Systems Analyst / Software Engineer"
+    organization: "SSI North America"
+    period: "June 1999 – June 2005"
+    location: "Minneapolis, Minnesota, USA"
+    text: |-
+      I worked on software development and systems analysis projects for clients across government, energy, telecommunications and transportation.
+
+      My technical work involved Java, Oracle PL/SQL, CORBA, distributed systems and three-tier application architectures, alongside system modelling and development in Unix and Linux environments.
+
+      Beyond programming, my responsibilities included business requirements analysis, technical coordination and direct interaction with clients, helping translate operational needs into software solutions.
+
+      This experience shaped one of the most important aspects of my professional approach: understanding technology not only as a development discipline, but also as a means of solving business problems.
+    areas:
+      - "Software Engineering"
+      - "Systems Analysis"
+      - "Java"
+      - "Oracle"
+      - "Distributed Architectures"
+      - "Business Analysis"
+    story: ssi
+  - role: "Production Planning Manager"
+    organization: "Weber Marking Systems"
+    period: "January 1998 – June 1999"
+    location: "Mississauga, Canada"
+    text: |-
+      I coordinated production planning and logistics activities in an industrial identification and labelling solutions company.
+
+      The position strengthened my understanding of operational processes, resource planning and the practical relationship between information systems and business activities.
+    areas:
+      - "Production Planning"
+      - "Logistics"
+      - "Operations"
+      - "Business Processes"
+    story: canada
+  - role: "Programmer Analyst"
+    organization: "Sefrad Digital"
+    period: "May 1996 – May 1998"
+    location: "Toronto, Canada"
+    text: |-
+      I developed business applications using Visual Basic, Microsoft Access and Crystal Reports.
+
+      This role allowed me to build practical software development experience, translating operational requirements into applications and reporting solutions.
+    areas:
+      - "Visual Basic"
+      - "Application Development"
+      - "Microsoft Access"
+      - "Reporting"
+    story: none
+  - role: "Engineer / Technical Sales Support"
+    organization: "Romforest SA"
+    period: "June 1993 – May 1995"
+    location: "Piatra Neamț, Romania"
+    text: |-
+      My early professional experience combined engineering with technical sales support and direct interaction with customers.
+
+      During this period, I developed a growing interest in software and began independently learning programming, particularly FoxPro and Visual Basic, building on my earlier exposure to Fortran during university.
+
+      This was the starting point of a gradual transition from engineering and commercial activities towards software development and information technology.
+    areas:
+      - "Engineering"
+      - "Technical Sales"
+      - "Customer Relations"
+      - "Early Programming"
+    story: early90s

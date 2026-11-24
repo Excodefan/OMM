@@ -3,7 +3,7 @@ import StoryPlayer from './StoryPlayer.astro';
 interface Props { role: { role: string; organization: string; period: string; location: string; text: string; areas: string[]; story: string }; lang: 'en' | 'ro'; }
 const { role, lang } = Astro.props;
 const paragraphs = role.text.split(/\n\s*\n/).map(p => p.trim()).filter(Boolean);
-const story = ['teletrans','mipe','electrica','deer','arhivio','expert'].includes(role.story) ? (role.story as 'teletrans'|'mipe'|'electrica'|'deer'|'arhivio'|'expert') : null;
+const story = ['teletrans','mipe','electrica','deer','arhivio','expert','crpcis','piatra','ssi','canada','early90s'].includes(role.story) ? (role.story as 'teletrans'|'mipe'|'electrica'|'deer'|'arhivio'|'expert'|'crpcis'|'piatra'|'ssi'|'canada'|'early90s') : null;
 ---
 <article class="role">
   <header class="role-head">

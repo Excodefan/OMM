@@ -1,6 +1,6 @@
 ---
 // Animație Career Story: nu pornește singură. Un click încarcă pagina din /stories/ într-un iframe.
-interface Props { story: 'teletrans' | 'mipe' | 'electrica' | 'deer' | 'arhivio' | 'expert'; lang: 'en' | 'ro'; }
+interface Props { story: 'teletrans' | 'mipe' | 'electrica' | 'deer' | 'arhivio' | 'expert' | 'crpcis' | 'piatra' | 'ssi' | 'canada' | 'early90s'; lang: 'en' | 'ro'; }
 const { story, lang } = Astro.props;
 const meta = {
   teletrans: { en: 'Teletrans · 2011—2016', ro: 'Teletrans · 2011—2016', bg: '#f5efe5', ink: '#272b2b', accent: '#bc6e4d' },
@@ -8,6 +8,11 @@ const meta = {
   deer: { en: 'DEER · 2023—2024', ro: 'DEER · 2023—2024', bg: '#f0f1f5', ink: '#272f50', accent: '#556bb0' },
   arhivio: { en: 'Arhivio Data · 2016—2018', ro: 'Arhivio Data · 2016—2018', bg: '#f7f1eb', ink: '#463728', accent: '#a46d43' },
   expert: { en: 'Expert Computers · 2018—2019', ro: 'Expert Computers · 2018—2019', bg: '#edf5f4', ink: '#1d4750', accent: '#23858e' },
+  crpcis: { en: 'CRPCIS · 2009—2011', ro: 'CRPCIS · 2009—2011', bg: '#f8f1ed', ink: '#483d49', accent: '#975d77' },
+  piatra: { en: 'Piatra Neamț · 2005—2009', ro: 'Piatra Neamț · 2005—2009', bg: '#f3f2e9', ink: '#3b4936', accent: '#6c8051' },
+  ssi: { en: 'SSI North America · 1999—2005', ro: 'SSI North America · 1999—2005', bg: '#f0eff5', ink: '#302e4c', accent: '#7365a7' },
+  canada: { en: 'Canada · 1996—1999', ro: 'Canada · 1996—1999', bg: '#edf3ef', ink: '#25473c', accent: '#44846b' },
+  early90s: { en: 'Early career · 1993—1995', ro: 'Început de carieră · 1993—1995', bg: '#f6f0e6', ink: '#4e382e', accent: '#b4774c' },
   mipe: { en: 'IT Expert · 2024—present', ro: 'Expert IT · 2024—prezent', bg: '#edf3f2', ink: '#193139', accent: '#237e83' },
 }[story];
 const t = lang === 'ro'
