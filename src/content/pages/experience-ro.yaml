@@ -120,3 +120,105 @@ items:
       - "Telecomunicații"
       - "Sector energetic"
     story: teletrans
+  - role: "Director general"
+    organization: "Centrul Român pentru Promovarea Comerțului și Investițiilor Străine (CRPCIS) — Ministerul Economiei"
+    period: "Septembrie 2009 – mai 2011"
+    location: "București"
+    text: |-
+      Am fost numit la conducerea acestei instituții publice în considerarea experienței mele internaționale în domeniul tehnologiei informației, cu obiectivul de a contribui la promovarea expertizei IT românești pe piețele externe și la atragerea investițiilor străine în sectorul tehnologic.
+
+      Rolul meu a îmbinat conducerea executivă cu dezvoltarea relațiilor economice internaționale, reprezentarea instituțională și promovarea competențelor românești pe piețele globale.
+
+      În cadrul mandatului mai larg al instituției, dedicat promovării exporturilor și investițiilor străine, am urmărit și consolidarea poziționării sectorului IT românesc ca domeniu atractiv pentru parteneriate și investiții internaționale.
+
+      Această experiență mi-a extins perspectiva asupra relației dintre tehnologie, dezvoltare economică, mediul de afaceri internațional și politicile publice.
+    areas:
+      - "Management executiv"
+      - "Relații economice internaționale"
+      - "Promovarea sectorului IT"
+      - "Investiții străine"
+      - "Conducere instituțională"
+    story: crpcis
+  - role: "Consilier IT&C / Manager de proiect"
+    organization: "Primăria Municipiului Piatra Neamț"
+    period: "Octombrie 2005 – septembrie 2009"
+    location: "Piatra Neamț"
+    text: |-
+      Am coordonat departamentul IT al municipalității, raportând direct primarului, și am avut o contribuție importantă la modernizarea și digitalizarea administrației publice locale.
+
+      Responsabilitățile mele au inclus elaborarea strategiilor IT, definirea priorităților tehnologice, coordonarea echipei de specialiști și a furnizorilor externi, precum și integrarea soluțiilor informatice în procesele administrative.
+
+      Am coordonat și am participat la inițiative privind evaluarea infrastructurii IT, pregătirea implementării unui sistem ERP și implementarea unui sistem electronic de control al accesului pentru facilități sportive.
+
+      Această experiență a reprezentat o etapă importantă în evoluția mea profesională, reunind pregătirea tehnică, responsabilitățile de conducere, managementul administrației publice și transformarea digitală.
+    areas:
+      - "Management IT"
+      - "Digitalizarea administrației publice"
+      - "Strategie IT"
+      - "Managementul proiectelor"
+      - "Transformare organizațională"
+    story: piatra
+  - role: "Analist de sisteme / Inginer software"
+    organization: "SSI North America"
+    period: "Iunie 1999 – iunie 2005"
+    location: "Minneapolis, Minnesota, SUA"
+    text: |-
+      Am participat la proiecte de dezvoltare software și analiză de sisteme pentru beneficiari din administrația publică, energie, telecomunicații și transporturi.
+
+      Activitatea tehnică a inclus utilizarea Java, Oracle PL/SQL, CORBA, arhitecturi distribuite și aplicații pe trei niveluri, precum și modelarea sistemelor și dezvoltarea în medii Unix și Linux.
+
+      Dincolo de programare, responsabilitățile mele au inclus analiza cerințelor de business, coordonarea tehnică și interacțiunea directă cu beneficiarii, contribuind la transformarea nevoilor operaționale în soluții informatice.
+
+      Această experiență a influențat semnificativ modul în care abordez tehnologia: nu doar ca activitate de dezvoltare software, ci și ca instrument pentru rezolvarea problemelor de business.
+    areas:
+      - "Dezvoltare software"
+      - "Analiză de sisteme"
+      - "Java"
+      - "Oracle"
+      - "Arhitecturi distribuite"
+      - "Analiză de business"
+    story: ssi
+  - role: "Manager — Planificarea producției"
+    organization: "Weber Marking Systems"
+    period: "Ianuarie 1998 – iunie 1999"
+    location: "Mississauga, Canada"
+    text: |-
+      Am coordonat activități de planificare a producției și logistică într-o companie specializată în soluții industriale de identificare și etichetare.
+
+      Această poziție mi-a consolidat înțelegerea proceselor operaționale, planificării resurselor și relației practice dintre sistemele informatice și activitățile de business.
+    areas:
+      - "Planificarea producției"
+      - "Logistică"
+      - "Operațiuni"
+      - "Procese de business"
+    story: canada
+  - role: "Analist programator"
+    organization: "Sefrad Digital"
+    period: "Mai 1996 – mai 1998"
+    location: "Toronto, Canada"
+    text: |-
+      Am dezvoltat aplicații informatice pentru activități de business, utilizând Visual Basic, Microsoft Access și Crystal Reports.
+
+      Această experiență mi-a permis să consolidez competențele practice de dezvoltare software, prin transformarea cerințelor operaționale în aplicații și soluții de raportare.
+    areas:
+      - "Visual Basic"
+      - "Dezvoltare aplicații"
+      - "Microsoft Access"
+      - "Raportare"
+    story: none
+  - role: "Inginer / Suport tehnic pentru vânzări"
+    organization: "Romforest SA"
+    period: "Iunie 1993 – mai 1995"
+    location: "Piatra Neamț"
+    text: |-
+      Prima etapă a activității mele profesionale a îmbinat pregătirea inginerească, suportul tehnic pentru vânzări și relația directă cu clienții.
+
+      În această perioadă, interesul pentru informatică m-a determinat să învăț programare în mod autodidact, în special FoxPro și Visual Basic, pornind de la cunoștințele de Fortran dobândite în timpul facultății.
+
+      Aceasta a fost etapa de început a unei tranziții treptate de la activitățile inginerești și comerciale către dezvoltarea software și tehnologia informației.
+    areas:
+      - "Inginerie"
+      - "Vânzări tehnice"
+      - "Relația cu clienții"
+      - "Programare"
+    story: early90s
