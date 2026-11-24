@@ -21,6 +21,25 @@ items:
       - "AI aplicat"
     story: mipe
   - role: "Consultant senior de management / Manager de proiect"
+    organization: "Distribuție Energie Electrică România — Grupul Electrica"
+    period: "Iulie 2023 – septembrie 2024"
+    location: "București"
+    text: |-
+      Am desfășurat activități de consultanță pentru management în cadrul unor inițiative strategice de tehnologie și infrastructură din sectorul distribuției energiei electrice.
+
+      Un domeniu important de implicare a fost implementarea unei soluții TIBCO Enterprise Service Bus (ESB), destinată integrării aplicațiilor informatice ale companiei, inclusiv MDM, WFM, AMS, SCADA, OMS și SAP IS-U.
+
+      Ca membru al echipei de management al proiectului, am participat la coordonarea colaborării dintre specialiștii interni, furnizorii externi și factorii implicați, cu atenție la cerințele tehnice, dependențele dintre activități, riscuri și livrabile.
+
+      Această experiență mi-a consolidat perspectiva asupra integrării sistemelor enterprise și a relației dintre arhitectura tehnologică, procesele operaționale și managementul proiectelor în sectorul energetic.
+    areas:
+      - "Managementul proiectelor"
+      - "Integrarea sistemelor enterprise"
+      - "TIBCO ESB"
+      - "Distribuția energiei"
+      - "Coordonarea echipelor și partenerilor"
+    story: deer
+  - role: "Consultant senior de management / Manager de proiect"
     organization: "Electrica Furnizare SA — Grupul Electrica"
     period: "Decembrie 2019 – iulie 2023"
     location: "București"

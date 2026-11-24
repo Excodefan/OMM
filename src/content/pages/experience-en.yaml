@@ -21,6 +21,25 @@ items:
       - "Applied AI"
     story: mipe
   - role: "Senior Management Consultant / Project Manager"
+    organization: "Distribuție Energie Electrică România — Electrica Group"
+    period: "July 2023 – September 2024"
+    location: "Bucharest, Romania"
+    text: |-
+      I provided management consultancy for strategic technology and infrastructure initiatives in the electricity distribution sector.
+
+      A key area of involvement was the implementation of a TIBCO Enterprise Service Bus (ESB) solution, designed to support the integration of enterprise applications including MDM, WFM, AMS, SCADA, OMS and SAP IS-U.
+
+      As part of the project management team, I contributed to coordinating internal specialists, external suppliers and stakeholders, with attention to technical requirements, dependencies, risks and project deliverables.
+
+      This experience strengthened my understanding of enterprise integration and the relationship between technology architecture, operational processes and project management in the energy sector.
+    areas:
+      - "Project Management"
+      - "Enterprise Integration"
+      - "TIBCO ESB"
+      - "Energy Distribution"
+      - "Stakeholder Coordination"
+    story: deer
+  - role: "Senior Management Consultant / Project Manager"
     organization: "Electrica Furnizare SA — Electrica Group"
     period: "December 2019 – July 2023"
     location: "Bucharest, Romania"
