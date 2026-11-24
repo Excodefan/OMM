@@ -1,9 +1,11 @@
 ---
 // Animație Career Story: nu pornește singură. Un click încarcă pagina din /stories/ într-un iframe.
-interface Props { story: 'teletrans' | 'mipe'; lang: 'en' | 'ro'; }
+interface Props { story: 'teletrans' | 'mipe' | 'electrica' | 'deer'; lang: 'en' | 'ro'; }
 const { story, lang } = Astro.props;
 const meta = {
   teletrans: { en: 'Teletrans · 2011—2016', ro: 'Teletrans · 2011—2016', bg: '#f5efe5', ink: '#272b2b', accent: '#bc6e4d' },
+  electrica: { en: 'Electrica Furnizare · 2019—2023', ro: 'Electrica Furnizare · 2019—2023', bg: '#f5f0ec', ink: '#44353e', accent: '#9b637e' },
+  deer: { en: 'DEER · 2023—2024', ro: 'DEER · 2023—2024', bg: '#f0f1f5', ink: '#272f50', accent: '#556bb0' },
   mipe: { en: 'IT Expert · 2024—present', ro: 'Expert IT · 2024—prezent', bg: '#edf3f2', ink: '#193139', accent: '#237e83' },
 }[story];
 const t = lang === 'ro'
