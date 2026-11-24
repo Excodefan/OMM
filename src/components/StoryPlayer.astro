@@ -1,6 +1,6 @@
 ---
 // Animație Career Story: nu pornește singură. Un click încarcă pagina din /stories/ într-un iframe.
-interface Props { story: 'teletrans' | 'mipe' | 'electrica' | 'deer' | 'arhivio' | 'expert' | 'crpcis' | 'piatra' | 'ssi' | 'canada' | 'early90s'; lang: 'en' | 'ro'; }
+interface Props { story: 'teletrans' | 'mipe' | 'electrica' | 'deer' | 'arhivio' | 'expert' | 'crpcis' | 'piatra' | 'ssi' | 'canada' | 'early90s' | 'sefrad'; lang: 'en' | 'ro'; }
 const { story, lang } = Astro.props;
 const meta = {
   teletrans: { en: 'Teletrans · 2011—2016', ro: 'Teletrans · 2011—2016', bg: '#f5efe5', ink: '#272b2b', accent: '#bc6e4d' },
@@ -13,11 +13,13 @@ const meta = {
   ssi: { en: 'SSI North America · 1999—2005', ro: 'SSI North America · 1999—2005', bg: '#f0eff5', ink: '#302e4c', accent: '#7365a7' },
   canada: { en: 'Canada · 1996—1999', ro: 'Canada · 1996—1999', bg: '#edf3ef', ink: '#25473c', accent: '#44846b' },
   early90s: { en: 'Early career · 1993—1995', ro: 'Început de carieră · 1993—1995', bg: '#f6f0e6', ink: '#4e382e', accent: '#b4774c' },
+  sefrad: { en: 'Sefrad Digital · 1996—1998', ro: 'Sefrad Digital · 1996—1998', bg: '#edf3ef', ink: '#25473c', accent: '#44846b' },
   mipe: { en: 'IT Expert · 2024—present', ro: 'Expert IT · 2024—prezent', bg: '#edf3f2', ink: '#193139', accent: '#237e83' },
 }[story];
+const secs = story === 'sefrad' ? 12 : 20;
 const t = lang === 'ro'
-  ? { tag: 'CAREER STORY · 20 SEC', play: 'Redă animația', replay: '↻ Din nou', label: 'Animație Career Story' }
-  : { tag: 'CAREER STORY · 20 SEC', play: 'Play the story', replay: '↻ Replay', label: 'Career Story animation' };
+  ? { tag: `CAREER STORY · ${secs} SEC`, play: 'Redă animația', replay: '↻ Din nou', label: 'Animație Career Story' }
+  : { tag: `CAREER STORY · ${secs} SEC`, play: 'Play the story', replay: '↻ Replay', label: 'Career Story animation' };
 ---
 <div class="story" data-story={story} data-lang={lang} data-title={`${t.label}: ${meta[lang]}`}
   style={`--s-bg:${meta.bg};--s-ink:${meta.ink};--s-accent:${meta.accent}`}>

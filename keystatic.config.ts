@@ -48,6 +48,7 @@ const experienceSchema = (l: { title: string; intro: string }) => ({
           { label: 'SSI North America (1999-2005)', value: 'ssi' },
           { label: 'Canada (1996-1999)', value: 'canada' },
           { label: 'Early career (1993-1995)', value: 'early90s' },
+          { label: 'Sefrad Digital (1996-1998, 12 s)', value: 'sefrad' },
           { label: 'IT Expert / MIPE (2024-present)', value: 'mipe' },
         ],
         defaultValue: 'none',
