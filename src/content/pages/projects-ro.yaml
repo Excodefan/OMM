@@ -1,0 +1,11 @@
+intro: "Un laborator în evoluție pentru software și AI aplicată."
+items:
+  - name: "Laborator de agenți AI"
+    description: "Un spațiu pentru explorarea agenților și a modelelor lingvistice locale."
+    status: "Concept"
+  - name: "Asistent pentru rapoarte"
+    description: "Un concept pentru extragerea, compararea și verificarea documentelor."
+    status: "Concept"
+  - name: "Bază personală de cunoștințe"
+    description: "Un posibil sistem de cunoștințe personal, căutabil și local."
+    status: "Concept"

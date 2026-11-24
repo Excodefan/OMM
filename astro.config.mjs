@@ -22,7 +22,7 @@ function devOnly(integration) {
 
 export default defineConfig({
   // Schimbă după ce ai domeniul (sau setează variabila SITE_URL la hosting).
-  site: process.env.SITE_URL ?? 'https://omm.omihaila.workers.dev',
+  site: process.env.SITE_URL ?? 'https://omihaila.com',
   trailingSlash: 'ignore',
   integrations: [
     markdoc(),

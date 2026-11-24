@@ -1,0 +1,11 @@
+intro: "An evolving laboratory for practical software and AI work."
+items:
+  - name: "AI Agents Lab"
+    description: "A sandbox for exploring agent workflows and local language models."
+    status: "Concept"
+  - name: "Report Assistant"
+    description: "A concept for extracting, comparing and reviewing project documents."
+    status: "Concept"
+  - name: "Personal Knowledge Base"
+    description: "A possible searchable, local-first knowledge system."
+    status: "Concept"
