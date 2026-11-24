@@ -24,7 +24,7 @@ const heading = experience?.data.title || page?.data.title || defaultTitles[sect
 const intro = projects?.intro || experience?.data.intro || page?.data.intro || defaultIntros[section];
 ---
 <Base lang={lang} title={navTitles[section]}>
-<div class="page-head"><div class="eyebrow">OM. / {navTitles[section]}</div><h1>{heading}</h1><p>{intro}</p></div>
+<div class="page-head"><div class="eyebrow">{navTitles[section]}</div><h1>{heading}</h1><p>{intro}</p></div>
 {section === 'writing' && <section class="section">{posts.length ? <PostCards posts={posts} lang={lang}/> : <p>{t.noPost}</p>}</section>}
 {Body && <div class="prose"><Body />{section === 'contact' && page?.data.email && <p><a href={`mailto:${page.data.email}`}>{page.data.email}</a></p>}</div>}
 {experience && <div class="roles">{experience.data.items.map(r => <RoleCard role={r} lang={lang} />)}</div>}
