@@ -41,6 +41,8 @@ const experienceSchema = (l: { title: string; intro: string }) => ({
           { label: 'Teletrans (2011-2016)', value: 'teletrans' },
           { label: 'Electrica Furnizare (2019-2023)', value: 'electrica' },
           { label: 'DEER (2023-2024)', value: 'deer' },
+          { label: 'Expert Computers (2018-2019)', value: 'expert' },
+          { label: 'Arhivio Data (2016-2018)', value: 'arhivio' },
           { label: 'IT Expert / MIPE (2024-present)', value: 'mipe' },
         ],
         defaultValue: 'none',

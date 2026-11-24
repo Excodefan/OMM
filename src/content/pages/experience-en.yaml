@@ -59,6 +59,44 @@ items:
       - "Project Management"
       - "Organizational Transformation"
     story: electrica
+  - role: "Project Manager"
+    organization: "Expert Computers"
+    period: "2018 – 2019"
+    location: "Canada"
+    text: |-
+      I worked as a Project Manager at Expert Computers, delivering cloud adoption and migration projects.
+
+      A key project was the migration from Exchange 2016 to Office 365, including planning user transition, activities and deployment milestones.
+
+      I also coordinated Azure adoption and infrastructure migration initiatives, supporting the move from on-premises systems to the cloud.
+
+      Day to day, I worked with clients, technical teams and suppliers to keep projects aligned and manage risks through to delivery.
+    areas:
+      - "Project Management"
+      - "Cloud Migration"
+      - "Microsoft 365"
+      - "Azure"
+    story: expert
+  - role: "Managing Director / Project Manager"
+    organization: "Arhivio Data"
+    period: "July 2016 – June 2018"
+    location: "Bucharest, Romania"
+    text: |-
+      I combined company management responsibilities with hands-on project management for software development initiatives, particularly content management and e-commerce solutions.
+
+      My work included coordinating business and technical requirements, organizing system analysis and design activities, defining project stages and deliverables, and managing collaboration with technical specialists and external consultants.
+
+      I was responsible for planning project schedules, assigning responsibilities, monitoring progress and managing dependencies, using Agile and Waterfall approaches according to project needs.
+
+      The role also involved client relationships, identifying business opportunities and exploring European funding options for IT projects.
+    areas:
+      - "IT Project Management"
+      - "Business Analysis"
+      - "Software Development"
+      - "CMS & E-commerce"
+      - "Team Coordination"
+      - "Client Relations"
+    story: arhivio
   - role: "Managing Director / Director"
     organization: "Teletrans SA"
     period: "May 2011 – July 2016"

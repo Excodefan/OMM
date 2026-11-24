@@ -59,6 +59,44 @@ items:
       - "Managementul proiectelor"
       - "Transformare organizațională"
     story: electrica
+  - role: "Manager de proiect"
+    organization: "Expert Computers"
+    period: "2018 – 2019"
+    location: "Canada"
+    text: |-
+      Am lucrat ca Manager de proiect la Expert Computers, coordonând proiecte de adopție și migrare în cloud.
+
+      Un proiect important a fost migrarea de la Exchange 2016 la Office 365, incluzând planificarea tranziției utilizatorilor, a activităților și a etapelor de implementare.
+
+      Am coordonat, de asemenea, inițiative de adoptare Azure și de migrare a infrastructurii, de la sisteme locale către cloud.
+
+      În activitatea zilnică am colaborat cu clienți, echipe tehnice și furnizori pentru a menține proiectele aliniate și a gestiona riscurile până la livrare.
+    areas:
+      - "Managementul proiectelor"
+      - "Migrare în cloud"
+      - "Microsoft 365"
+      - "Azure"
+    story: expert
+  - role: "Director general / Manager de proiect"
+    organization: "Arhivio Data"
+    period: "Iulie 2016 – iunie 2018"
+    location: "București"
+    text: |-
+      Am îmbinat responsabilitățile de conducere a companiei cu managementul efectiv al proiectelor de dezvoltare software, în special al soluțiilor de gestionare a conținutului (CMS) și comerț electronic.
+
+      Activitatea mea a inclus coordonarea definirii cerințelor de business și tehnice, organizarea etapelor de analiză și proiectare a sistemelor, stabilirea livrabilelor și gestionarea colaborării cu specialiștii tehnici și consultanții externi.
+
+      Am fost responsabil de planificarea proiectelor, alocarea responsabilităților, urmărirea progresului și gestionarea dependențelor, folosind abordări Agile și Waterfall în funcție de specificul proiectelor.
+
+      Rolul a inclus și relația cu beneficiarii, identificarea oportunităților de business și explorarea posibilităților de finanțare europeană pentru proiecte IT.
+    areas:
+      - "Managementul proiectelor IT"
+      - "Analiză de business"
+      - "Dezvoltare software"
+      - "CMS și comerț electronic"
+      - "Coordonarea echipelor"
+      - "Relația cu beneficiarii"
+    story: arhivio
   - role: "Director general / Director"
     organization: "Teletrans SA"
     period: "Mai 2011 – iulie 2016"
