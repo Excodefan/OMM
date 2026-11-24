@@ -41,7 +41,7 @@ const pageTitle = title ? `${title} | O/M/M` : 'O/M/M — Technology, people & p
    <div class="header-tools"><a class="lang-toggle" href={languagePath} aria-label={lang === 'en' ? 'Switch to Romanian' : 'Switch to English'}>{lang.toUpperCase()} <span class="arrow">⇄</span> {opposite.toUpperCase()}</a><button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Dark mode">◐</button></div>
   </header>
   <main><slot /></main>
-  <footer class="footer"><div class="footer-signature"><div class="footer-name">OVIDIU MIHAIL MIHĂILĂ</div><div class="footer-tagline">technology · management · ai</div></div><span class="footer-copyright">© {new Date().getFullYear()}</span></footer>
+  <footer class="footer"><div class="footer-signature"><div class="footer-name">OVIDIU MIHAIL MIHĂILĂ</div></div></footer>
  </div>
  <script is:inline>
   document.querySelector('#theme-toggle')?.addEventListener('click', () => {
