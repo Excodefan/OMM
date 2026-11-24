@@ -47,4 +47,27 @@ const experience = defineCollection({
   }),
 });
 
-export const collections = { posts, pages, projects, experience };
+// Pagina de start: home-en.yaml / home-ro.yaml
+const home = defineCollection({
+  loader: glob({ pattern: 'home-*.yaml', base: './src/content/pages' }),
+  schema: z.object({
+    heroTitle: z.string().default(''),
+    heroText: z.string().default(''),
+    heroPrimary: z.string().default(''),
+    heroSecondary: z.string().default(''),
+    aboutTitle: z.string().default(''),
+    aboutText: z.string().default(''),
+    aboutCta: z.string().default(''),
+    writingTitle: z.string().default(''),
+    writingText: z.string().default(''),
+    writingCta: z.string().default(''),
+    projectsTitle: z.string().default(''),
+    projectsText: z.string().default(''),
+    projectsNote: z.string().default(''),
+    contactTitle: z.string().default(''),
+    contactText: z.string().default(''),
+    contactCta: z.string().default(''),
+  }),
+});
+
+export const collections = { posts, pages, projects, experience, home };
