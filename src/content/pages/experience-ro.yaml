@@ -59,6 +59,46 @@ items:
       - "Managementul proiectelor"
       - "Transformare organizațională"
     story: electrica
+  - role: "Manager de proiect"
+    organization: "Expert Computers"
+    period: "Iulie 2018 – iulie 2019"
+    location: "London, Ontario, Canada"
+    text: |-
+      Am gestionat proiecte IT de adoptare a soluțiilor cloud și modernizare a infrastructurii informatice, inclusiv migrarea utilizatorilor de la Microsoft Exchange 2016 la Office 365 și inițiative de implementare a soluțiilor Microsoft Azure.
+
+      Responsabilitățile mele au inclus planificarea proiectelor, coordonarea echipelor tehnice, colaborarea cu beneficiarii și specialiștii în soluții, precum și urmărirea termenelor, riscurilor și etapelor de implementare.
+
+      Am contribuit, de asemenea, la pregătirea propunerilor de proiect și a documentelor de definire a serviciilor, urmărind corelarea cerințelor tehnice cu așteptările clienților și planurile de livrare.
+
+      Această experiență mi-a consolidat practica managementului de proiect, prin îmbinarea planificării structurate cu managementul relațiilor cu părțile implicate și coordonarea implementărilor tehnice.
+    areas:
+      - "Managementul proiectelor"
+      - "Migrare cloud"
+      - "Microsoft 365"
+      - "Azure"
+      - "Relația cu beneficiarii"
+      - "Livrarea proiectelor"
+    story: expert
+  - role: "Director general / Manager de proiect"
+    organization: "Arhivio Data"
+    period: "Iulie 2016 – iunie 2018"
+    location: "București"
+    text: |-
+      Am îmbinat responsabilitățile de conducere a companiei cu managementul efectiv al proiectelor de dezvoltare software, în special al soluțiilor de gestionare a conținutului (CMS) și comerț electronic.
+
+      Activitatea mea a inclus coordonarea definirii cerințelor de business și tehnice, organizarea etapelor de analiză și proiectare a sistemelor, stabilirea livrabilelor și gestionarea colaborării cu specialiștii tehnici și consultanții externi.
+
+      Am fost responsabil de planificarea proiectelor, alocarea responsabilităților, urmărirea progresului și gestionarea dependențelor, folosind abordări Agile și Waterfall în funcție de specificul proiectelor.
+
+      Rolul a inclus și relația cu beneficiarii, identificarea oportunităților de business și explorarea posibilităților de finanțare europeană pentru proiecte IT.
+    areas:
+      - "Managementul proiectelor IT"
+      - "Analiză de business"
+      - "Dezvoltare software"
+      - "CMS și comerț electronic"
+      - "Coordonarea echipelor"
+      - "Relația cu beneficiarii"
+    story: arhivio
   - role: "Director general / Director"
     organization: "Teletrans SA"
     period: "Mai 2011 – iulie 2016"
