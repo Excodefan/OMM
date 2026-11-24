@@ -20,6 +20,26 @@ items:
       - "Process Automation"
       - "Applied AI"
     story: mipe
+  - role: "Senior Management Consultant / Project Manager"
+    organization: "Electrica Furnizare SA — Electrica Group"
+    period: "December 2019 – July 2023"
+    location: "Bucharest, Romania"
+    text: |-
+      I provided senior management consultancy in technology modernization, organizational transformation and IT project coordination within the electricity supply sector.
+
+      One of my key responsibilities was coordinating the implementation of the cybersecurity framework required under the EU's NIS 1 Directive. This involved developing and implementing organizational security policies, procedures and measures applicable to operators of essential services. The implementation was subject to audits conducted by Romania's National Cyber Security Directorate (DNSC), with positive outcomes.
+
+      I also contributed to the planning and coordination of enterprise system integration and transition activities involving SAP IS-U and SAP S/4HANA.
+
+      The role required collaboration across management, technical and operational teams, monitoring project activities, risks and dependencies, and supporting alignment between technology initiatives and business priorities.
+    areas:
+      - "Management Consulting"
+      - "NIS 1 Implementation"
+      - "Cybersecurity Governance"
+      - "SAP Integration"
+      - "Project Management"
+      - "Organizational Transformation"
+    story: electrica
   - role: "Managing Director / Director"
     organization: "Teletrans SA"
     period: "May 2011 – July 2016"
