@@ -32,7 +32,9 @@ const pageTitle = title ? `${title} | O/M/M` : 'O/M/M — Technology, people & p
 <body>
  <div class="site-wrap">
   <header class="site-header">
-   <a class="brand" href={localPath(lang)} aria-label="O/M/M home"><span class="brand-char">O</span><span class="brand-slash">/</span><span class="brand-char">M</span><span class="brand-slash">/</span><span class="brand-char">M</span></a>
+   <a href={localPath(lang)} class="site-logo" aria-label="O Mihail A — Home">
+    <span>O</span><span class="logo-dot">.</span><span>MIHAIL</span><span class="logo-dot">.</span><span>A</span>
+   </a>
    <nav class="main-nav" aria-label="Main navigation">
     {navSlugs.map((slug, i) => <a class:list={['nav-link', { active: currentSegment.replace(/\/$/,'') === slug }]} href={localPath(lang,slug)}>{t.nav[i]}</a>)}
    </nav>
