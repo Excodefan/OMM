@@ -14,4 +14,24 @@ const posts = defineCollection({
     readingMinutes: z.number().optional(), // opțional: dacă lipsește, se calculează automat
   }),
 });
-export const collections = { posts };
+
+// Pagini editabile din Keystatic: about-en.mdoc, contact-ro.mdoc etc.
+const pages = defineCollection({
+  loader: glob({ pattern: '*.mdoc', base: './src/content/pages' }),
+  schema: z.object({
+    title: z.string().default(''),
+    intro: z.string().default(''),
+    email: z.string().optional(),
+  }),
+});
+
+// Lista de proiecte: projects-en.yaml / projects-ro.yaml
+const projects = defineCollection({
+  loader: glob({ pattern: '*.yaml', base: './src/content/pages' }),
+  schema: z.object({
+    intro: z.string().default(''),
+    items: z.array(z.object({ name: z.string(), description: z.string().default(''), status: z.string().default('') })).default([]),
+  }),
+});
+
+export const collections = { posts, pages, projects };
