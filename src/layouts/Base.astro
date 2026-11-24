@@ -32,14 +32,16 @@ const pageTitle = title ? `${title} | O/M/M` : 'O/M/M — Technology, people & p
 <body>
  <div class="site-wrap">
   <header class="site-header">
-   <a class="brand" href={localPath(lang)} aria-label="O/M/M home"><span class="brand-char">O</span><span class="brand-slash">/</span><span class="brand-char">M</span><span class="brand-slash">/</span><span class="brand-char">M</span></a>
+   <a href={localPath(lang)} class="site-logo" aria-label="O Mihail A — Home">
+    <span>O</span><span class="logo-dot">.</span><span>MIHAIL</span><span class="logo-dot">.</span><span>A</span>
+   </a>
    <nav class="main-nav" aria-label="Main navigation">
     {navSlugs.map((slug, i) => <a class:list={['nav-link', { active: currentSegment.replace(/\/$/,'') === slug }]} href={localPath(lang,slug)}>{t.nav[i]}</a>)}
    </nav>
    <div class="header-tools"><a class="lang-toggle" href={languagePath} aria-label={lang === 'en' ? 'Switch to Romanian' : 'Switch to English'}>{lang.toUpperCase()} <span class="arrow">⇄</span> {opposite.toUpperCase()}</a><button id="theme-toggle" type="button" aria-label="Toggle dark mode" title="Dark mode">◐</button></div>
   </header>
   <main><slot /></main>
-  <footer class="footer"><div class="footer-signature"><div class="footer-name">OVIDIU MIHAIL MIHĂILĂ</div><div class="footer-tagline">technology · management · ai</div></div><span class="footer-copyright">© {new Date().getFullYear()}</span></footer>
+  <footer class="footer"><div class="footer-signature"><div class="footer-name">OVIDIU MIHAIL MIHĂILĂ</div></div><span class="footer-copyright">© {new Date().getFullYear()}</span></footer>
  </div>
  <script is:inline>
   document.querySelector('#theme-toggle')?.addEventListener('click', () => {
