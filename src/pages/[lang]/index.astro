@@ -1,18 +1,20 @@
 ---
 import Base from '../../layouts/Base.astro';
-import PostCards from '../../components/PostCards.astro';
-import { getPosts } from '../../lib/posts';
-import { getProjects } from '../../lib/pages';
+import { getEntry } from 'astro:content';
 import { words, localPath, languages, type Lang } from '../../lib/i18n';
 export function getStaticPaths() { return languages.map(lang => ({ params:{lang} })); }
 const lang = Astro.params.lang as Lang; const t = words[lang];
-const posts = (await getPosts(lang)).slice(0,3);
-const projects = (await getProjects(lang)).items;
+const h = (await getEntry('home', `home-${lang}`))!.data;
+const paras = (s: string) => s.split(/\n\s*\n/).map(x => x.trim()).filter(Boolean);
 ---
 <Base lang={lang}>
-<section class="hero"><div><div class="eyebrow">{t.kicker}</div><h1>{t.hero}</h1><p>{t.intro}</p><div class="actions"><a class="button primary" href={localPath(lang,'writing')}>{t.read} ↗</a><a class="button" href={localPath(lang,'projects')}>{t.projects}</a></div></div><div class="hero-art" role="img" aria-label="Abstract layered landscape illustration"><div class="sun"></div><div class="orbit"></div><div class="node"></div></div></section>
-<div class="focus"><div class="focus-label">{t.focus}</div><div class="focus-items">{t.areas.map(area=><span>✦ {area}</span>)}</div></div>
-<section class="section"><div class="section-head"><h2>{t.recent}</h2><a href={localPath(lang,'writing')}>{t.all} ↗</a></div>{posts.length ? <PostCards posts={posts} lang={lang}/> : <p>{t.noPost}</p>}</section>
-<section class="section"><div class="section-head"><h2>{t.lab}</h2><a href={localPath(lang,'projects')}>{t.projects} ↗</a></div><div class="cards">{projects.map((p,i)=><a class="card project-card" href={localPath(lang,'projects')}><div class="project-icon">{['◇','▤','◈'][i%3]}</div><h3>{p.name}</h3><p>{p.description}</p>{p.status && <span class="chip">{p.status}</span>}</a>)}</div></section>
-<section class="section"><div class="story-banner"><div><div class="eyebrow">CAREER STORIES</div><h2>{t.journey}</h2><p>{t.journeyDesc}</p></div><a href={localPath(lang,'experience')} class="button primary">{t.careerButton} ↗</a></div></section>
+<section class="hero"><div><div class="eyebrow">{t.kicker}</div><h1>{h.heroTitle}</h1><p>{h.heroText}</p><div class="actions"><a class="button primary" href={localPath(lang,'experience')}>{h.heroPrimary} ↗</a><a class="button" href={localPath(lang,'about')}>{h.heroSecondary}</a></div></div><div class="hero-art" role="img" aria-label="Abstract layered landscape illustration"><div class="sun"></div><div class="orbit"></div><div class="node"></div></div></section>
+
+<section class="section home-block"><h2>{h.aboutTitle}</h2><div class="home-body">{paras(h.aboutText).map(p => <p>{p}</p>)}<a class="button" href={localPath(lang,'about')}>{h.aboutCta} ↗</a></div></section>
+
+<section class="section home-block"><h2>{h.writingTitle}</h2><div class="home-body">{paras(h.writingText).map(p => <p>{p}</p>)}<a class="button" href={localPath(lang,'writing')}>{h.writingCta} ↗</a></div></section>
+
+<section class="section home-block"><h2>{h.projectsTitle}</h2><div class="home-body">{paras(h.projectsText).map(p => <p>{p}</p>)}{h.projectsNote && <span class="chip">{h.projectsNote}</span>}</div></section>
+
+<section class="section"><div class="story-banner"><div><h2>{h.contactTitle}</h2><p>{h.contactText}</p></div><a href={localPath(lang,'contact')} class="button primary">{h.contactCta} ↗</a></div></section>
 </Base>

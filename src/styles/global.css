@@ -107,3 +107,10 @@ p { color:var(--muted); }
 .story-poster:focus-visible { outline:3px solid var(--s-accent); outline-offset:-6px; }
 .story-replay { margin-top:10px; background:none; border:0; color:var(--accent); font-size:13px; font-weight:650; cursor:pointer; padding:4px 0; }
 @media (max-width:860px){ .role { grid-template-columns:1fr; } .role-story { position:static; } }
+
+/* Pagina de start: blocuri titlu + text */
+.home-block { display:grid; grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr); gap:48px; align-items:start; border-top:1px solid var(--line); }
+.home-block h2 { margin:0; }
+.home-body p { margin:0 0 16px; max-width:640px; }
+.home-body .button, .home-body .chip { margin-top:8px; }
+@media(max-width:950px){ .home-block { grid-template-columns:1fr; gap:18px; } }

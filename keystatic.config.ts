@@ -56,6 +56,42 @@ const experienceSchema = (l: { title: string; intro: string }) => ({
     { label: 'Roles (newest first)', itemLabel: (p) => p.fields.role.value || 'Role' },
   ),
 });
+const homeSchema = (lang: 'en' | 'ro') => (lang === 'en' ? {
+  heroTitle: fields.text({ label: 'Hero: title' }),
+  heroText: fields.text({ label: 'Hero: text', multiline: true }),
+  heroPrimary: fields.text({ label: 'Hero: main button (→ Experience)' }),
+  heroSecondary: fields.text({ label: 'Hero: second button (→ About)' }),
+  aboutTitle: fields.text({ label: 'About block: title' }),
+  aboutText: fields.text({ label: 'About block: text (blank line between paragraphs)', multiline: true }),
+  aboutCta: fields.text({ label: 'About block: button' }),
+  writingTitle: fields.text({ label: 'Writing block: title' }),
+  writingText: fields.text({ label: 'Writing block: text (blank line between paragraphs)', multiline: true }),
+  writingCta: fields.text({ label: 'Writing block: button' }),
+  projectsTitle: fields.text({ label: 'Projects block: title' }),
+  projectsText: fields.text({ label: 'Projects block: text (blank line between paragraphs)', multiline: true }),
+  projectsNote: fields.text({ label: 'Projects block: small note' }),
+  contactTitle: fields.text({ label: 'Contact block: title' }),
+  contactText: fields.text({ label: 'Contact block: text', multiline: true }),
+  contactCta: fields.text({ label: 'Contact block: button' }),
+} : {
+  heroTitle: fields.text({ label: 'Hero: titlu' }),
+  heroText: fields.text({ label: 'Hero: text', multiline: true }),
+  heroPrimary: fields.text({ label: 'Hero: buton principal (→ Experiență)' }),
+  heroSecondary: fields.text({ label: 'Hero: al doilea buton (→ Despre)' }),
+  aboutTitle: fields.text({ label: 'Bloc Despre: titlu' }),
+  aboutText: fields.text({ label: 'Bloc Despre: text (rând gol între paragrafe)', multiline: true }),
+  aboutCta: fields.text({ label: 'Bloc Despre: buton' }),
+  writingTitle: fields.text({ label: 'Bloc Articole: titlu' }),
+  writingText: fields.text({ label: 'Bloc Articole: text (rând gol între paragrafe)', multiline: true }),
+  writingCta: fields.text({ label: 'Bloc Articole: buton' }),
+  projectsTitle: fields.text({ label: 'Bloc Proiecte: titlu' }),
+  projectsText: fields.text({ label: 'Bloc Proiecte: text (rând gol între paragrafe)', multiline: true }),
+  projectsNote: fields.text({ label: 'Bloc Proiecte: notă scurtă' }),
+  contactTitle: fields.text({ label: 'Bloc Contact: titlu' }),
+  contactText: fields.text({ label: 'Bloc Contact: text', multiline: true }),
+  contactCta: fields.text({ label: 'Bloc Contact: buton' }),
+});
+
 const projectsSchema = (intro: string, itemLabel: string, name: string, desc: string, status: string) => ({
   intro: fields.text({ label: intro, multiline: true }),
   items: fields.array(
@@ -72,11 +108,13 @@ export default config({
   storage: { kind: 'local' },
   ui: {
     navigation: {
-      Pages: ['aboutEn', 'aboutRo', 'contactEn', 'contactRo', 'experienceEn', 'experienceRo', 'projectsEn', 'projectsRo'],
+      Pages: ['homeEn', 'homeRo', 'aboutEn', 'aboutRo', 'contactEn', 'contactRo', 'experienceEn', 'experienceRo', 'projectsEn', 'projectsRo'],
       Articles: ['postsEn', 'postsRo'],
     },
   },
   singletons: {
+    homeEn: singleton({ label: 'Home (English)', path: 'src/content/pages/home-en', schema: homeSchema('en') }),
+    homeRo: singleton({ label: 'Pagina de start (Română)', path: 'src/content/pages/home-ro', schema: homeSchema('ro') }),
     aboutEn: singleton({ label: 'About (English)', path: 'src/content/pages/about-en', format: { contentField: 'content' }, schema: pageFields(en) }),
     aboutRo: singleton({ label: 'Despre (Română)', path: 'src/content/pages/about-ro', format: { contentField: 'content' }, schema: pageFields(ro) }),
     contactEn: singleton({ label: 'Contact (English)', path: 'src/content/pages/contact-en', format: { contentField: 'content' }, schema: { ...pageFields(en), email: fields.text({ label: 'Email' }) } }),
